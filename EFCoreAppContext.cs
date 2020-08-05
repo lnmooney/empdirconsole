@@ -7,6 +7,7 @@ namespace EFCoreApp
         public DbSet<Employee> Employees { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            // use this
             optionsBuilder.UseSqlServer(@"Server=empdir.database.windows.net;Database=empdir;User Id=sqladmin;Password=password1!;Trusted_Connection=False;MultipleActiveResultSets=true");
         }
     }
